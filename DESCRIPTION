@@ -13,13 +13,15 @@ Description: The package provides utility functions related to package
   development. These include functions that replace slots, and selectors
   for show methods. It aims to coalesce the various helper functions
   often re-used throughout the Bioconductor ecosystem.
-Imports: methods
+Imports: methods, utils
+Suggests:
+  knitr,
+  rmarkdown,
+  BiocStyle
 License: Artistic-2.0
 Encoding: UTF-8
+biocViews: Software, Infrastructure
+BugReports: https://www.github.com/Bioconductor/BiocUtils/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Suggests: 
-    knitr,
-    rmarkdown,
-    BiocStyle
 VignetteBuilder: knitr
