@@ -49,8 +49,9 @@ selectSome <- function(obj, maxToShow = 5, ellipsis = "...",
         } else {
             bot <- ceiling(maxToShow/2)
             top <- len - (maxToShow - bot - 1)
-            nms <- obj[c(1:bot, top:len)]
-            c(as.character(nms[1:bot]), ellipsis, as.character(nms[-c(1:bot)]))
+            sbot <- seq_len(bot)
+            nms <- obj[c(sbot, top:len)]
+            c(as.character(nms[sbot]), ellipsis, as.character(nms[-sbot]))
         }
     } else {
         obj
