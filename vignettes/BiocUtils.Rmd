@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 # Installation
 
-```{r setup}
+```{r,eval=FALSE}
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("Bioconductor/BiocUtils")
@@ -93,5 +93,11 @@ setMethod("show", signature = "A", function(object) {
     cat("A sequence:", selectSome(object@slot1))
 })
 aclass
+```
+
+# Session Info
+
+```{r}
+sessionInfo()
 ```
 
