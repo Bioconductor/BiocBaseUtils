@@ -42,3 +42,6 @@ letters
 selectSome(letters)
 
 }
+\author{
+M. Morgan, H. Pagès
+}

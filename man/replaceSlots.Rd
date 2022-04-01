@@ -33,3 +33,6 @@ aclass <- new("A", slotA = "A")
 replaceSlots(aclass, slotA = "B")
 
 }
+\author{
+H. Pagès
+}

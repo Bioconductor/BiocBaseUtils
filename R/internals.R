@@ -17,6 +17,8 @@
 #'
 #' @importFrom methods slot<- validObject
 #'
+#' @author H. Pagès
+#'
 #' @examples
 #'
 #' setClass("A", representation = representation(slotA = "character"))

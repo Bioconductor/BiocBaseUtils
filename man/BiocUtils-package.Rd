@@ -16,6 +16,7 @@ what packages.
 
 Other contributors:
 \itemize{
+  \item Martin Morgan \email{martin.morgan@roswellpark.org} [contributor]
   \item Hervé Pagès \email{hpages.on.github@gmail.com} [contributor]
 }
 

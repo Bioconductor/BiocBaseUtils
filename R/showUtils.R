@@ -22,6 +22,8 @@
 #'
 #' @importFrom utils head tail
 #'
+#' @author M. Morgan, H. Pagès
+#'
 #' @examples
 #'
 #' letters
