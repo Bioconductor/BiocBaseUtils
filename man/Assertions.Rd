@@ -34,6 +34,9 @@ characters, i.e., \code{""} (default: \code{FALSE}).}
 \item{infinite.ok}{logical(1L) Whether it is acceptable to consider infinite
 values as identified by \code{is.finite} (default: \code{FALSE}).}
 }
+\value{
+Either \code{TRUE} or \code{FALSE}
+}
 \description{
 These are a group of helper functions that allow the developer
 to easily check for common data types in Bioconductor. These include

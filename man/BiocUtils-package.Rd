@@ -9,6 +9,13 @@ are scattered throughout the Bioconductor ecosystem. Some of these functions
 include the ability to replace slots in an object. Other functions work
 to create a nice show method output by selecting some observations.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item Report bugs at \url{https://www.github.com/Bioconductor/BiocUtils/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Marcel Ramos \email{marcel.ramos@roswellpark.org} (\href{https://orcid.org/0000-0002-3242-0582}{ORCID})
 

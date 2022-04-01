@@ -24,6 +24,10 @@
 #'
 #' @author M. Morgan, H. Pagès
 #'
+#' @return Either `TRUE` or `FALSE`
+#'
+#' @md
+#'
 #' @examples
 #'
 #' isTRUEorFALSE(TRUE)
