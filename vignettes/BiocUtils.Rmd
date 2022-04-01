@@ -1,0 +1,97 @@
+---
+title: "BiocUtils Quick Start"
+author: "Bioconductor Core Team"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  BiocStyle::html_document:
+    number_sections: yes
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{BiocUtils Quick Start}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Installation
+
+```{r setup}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("Bioconductor/BiocUtils")
+```
+
+# Assertions
+
+We provide a number of functions that helps the developer establish the
+type of class of a particular object. These include `integer`, `numeric`,
+`character`, and `logical`; types often used in Bioconductor.
+
+## Logical
+
+```{r}
+isTRUEorFALSE(TRUE)
+isTRUEorFALSE(FALSE)
+isTRUEorFALSE(NA, na.ok = TRUE)
+```
+
+## Character
+
+```{r}
+isSingleCharacter(LETTERS)
+isSingleCharacter("L")
+isCharacter(LETTERS)
+isCharacter(NA_character_, na.ok = TRUE)
+is01character("")
+is01character("", zchar = TRUE)
+```
+
+## Numeric
+
+```{r}
+isSingleInteger(1L)
+isSingleInteger(1)
+
+isSingleNumber(1)
+isSingleNumber(1:2)
+```
+
+# Slot replacement
+
+This function is often used in packages that establish formal S4 classes.
+When updating the value of a slot, one often uses the `replaceSlots` function.
+
+```{r}
+setClass("A", representation = representation(slot1 = "numeric"))
+aclass <- new("A", slot1 = 1:10)
+aclass
+```
+
+Now we use the `replaceSlots` function to update the values in the object.
+
+```{r}
+aclass <- replaceSlots(aclass, slot1 = 11:20)
+aclass
+```
+
+# Show method
+
+The `selectSome` function allows the developer to display a limited amount of
+information from a developed class. Note that the use of the `@` here is due
+to the minimal implementation in the examples provided. The developer should
+always provide an interface to access the internal components of the class
+via an 'accessor' function.
+
+```{r}
+setMethod("show", signature = "A", function(object) {
+    cat("A sequence:", selectSome(object@slot1))
+})
+aclass
+```
+

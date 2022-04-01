@@ -1,6 +1,6 @@
 Package: BiocUtils
 Title: General utility functions for Bioconductor packages
-Version: 0.99.0
+Version: 0.99.1
 Authors@R: c(
   person("Marcel", "Ramos", , "marcel.ramos@roswellpark.org",
     c("aut", "cre"), c(ORCID = "0000-0002-3242-0582")
@@ -10,10 +10,16 @@ Authors@R: c(
   person("Hervé", "Pagès", , "hpages.on.github@gmail.com", "ctb")
   )
 Description: The package provides utility functions related to package
-  development. These include functions that replace slots, partial selectors
-  for show methods. It also provides email retrieval from a list of packages.
+  development. These include functions that replace slots, and selectors
+  for show methods. It aims to coalesce the various helper functions
+  often re-used throughout the Bioconductor ecosystem.
 Imports: methods
 License: Artistic-2.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    BiocStyle
+VignetteBuilder: knitr
