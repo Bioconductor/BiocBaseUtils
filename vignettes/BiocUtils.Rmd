@@ -27,6 +27,12 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("Bioconductor/BiocUtils")
 ```
 
+# Load Package
+
+```{r,include=TRUE,results="hide",message=FALSE,warning=FALSE}
+library(BiocUtils)
+```
+
 # Assertions
 
 We provide a number of functions that helps the developer establish the
