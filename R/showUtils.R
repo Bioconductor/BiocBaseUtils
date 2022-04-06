@@ -5,8 +5,8 @@
 #'
 #' @param obj character() A vector to be abbreviated for display purposes
 #'
-#' @param maxToShow numeric(1) The maximum number of values to show in the output
-#'     (default: 5)
+#' @param maxToShow numeric(1) The maximum number of values to show in the
+#'     output (default: 5)
 #'
 #' @param ellipsis character(1) The symbol used to abbreviate values in the
 #'     vector (default: "...")
