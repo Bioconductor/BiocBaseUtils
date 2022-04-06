@@ -15,8 +15,8 @@ selectSome(
 \arguments{
 \item{obj}{character() A vector to be abbreviated for display purposes}
 
-\item{maxToShow}{numeric(1) The maximum number of values to show in the output
-(default: 5)}
+\item{maxToShow}{numeric(1) The maximum number of values to show in the
+output (default: 5)}
 
 \item{ellipsis}{character(1) The symbol used to abbreviate values in the
 vector (default: "...")}
