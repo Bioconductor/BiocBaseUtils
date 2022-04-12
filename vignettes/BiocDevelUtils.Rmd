@@ -81,7 +81,7 @@ isSingleNumber(1:2)
 # Slot replacement
 
 This function is often used in packages that establish formal S4 classes.
-When updating the value of a slot, one often uses the `replaceSlots` function.
+When updating the value of a slot, one often uses the `setSlots` function.
 
 ```{r}
 setClass("A", representation = representation(slot1 = "numeric"))
@@ -89,15 +89,16 @@ aclass <- new("A", slot1 = 1:10)
 aclass
 ```
 
-Now we use the `replaceSlots` function to update the values in the object.
+Now we use the `setSlots` function to update the values in the object.
 
 ```{r}
-aclass <- replaceSlots(aclass, slot1 = 11:20)
+aclass <- setSlots(aclass, slot1 = 11:20)
 aclass
 ```
 
-Note that `setSlots` provides the same functionality as `replaceSlots` but
-is more consistent with Bioconductor the setter and getter language.
+Note that `setSlots` provides the same functionality as
+`BiocGenerics:::replaceSlots` but is more consistent with Bioconductor the
+setter and getter language.
 
 # Show method
 

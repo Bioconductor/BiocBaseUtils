@@ -5,11 +5,18 @@
 }
 
 #' @name Assertions
+#'
 #' @title Suite of helper functions to test for types
 #'
-#' @description These are a group of helper functions that allow the developer
+#' @description
+#' These are a group of helper functions that allow the developer
 #' to easily check for common data types in Bioconductor. These include
 #' logical, character, and numeric (& integer).
+#'
+#' @details
+#' Some functions such as `isSingleCharacter` allow exceptions to the type
+#' checks via the `na.ok` and `zchar` arguments. Others, for example
+#' `isSingleNumber` can permit `Inf` with the `infinite.ok` argument.
 #'
 #' @param x The input vector whose type is to be checked
 #'
@@ -50,7 +57,7 @@
 NULL
 
 
-#' @describeIn Assertions
+#' @describeIn Assertions Is the input a single logical vector?
 #'
 #' @export
 isTRUEorFALSE <- function(x, na.ok = FALSE)
@@ -58,7 +65,7 @@ isTRUEorFALSE <- function(x, na.ok = FALSE)
     .isSingle(x, na.ok, is.logical)
 }
 
-#' @describeIn Assertions
+#' @describeIn Assertions Is the input a single character vector?
 #'
 #' @export
 isSingleCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
@@ -66,7 +73,7 @@ isSingleCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
     identical(length(x), 1L) && isCharacter(x, na.ok, zchar)
 }
 
-#' @describeIn Assertions
+#' @describeIn Assertions Is the input a single integer vector?
 #'
 #' @export
 isSingleInteger <- function(x, na.ok = FALSE)
@@ -74,7 +81,7 @@ isSingleInteger <- function(x, na.ok = FALSE)
     .isSingle(x, na.ok, is.integer)
 }
 
-#' @describeIn Assertions
+#' @describeIn Assertions Is the input a single numeric vector?
 #'
 #' @export
 isSingleNumber <- function(x, na.ok = FALSE, infinite.ok = FALSE)
@@ -82,7 +89,7 @@ isSingleNumber <- function(x, na.ok = FALSE, infinite.ok = FALSE)
     .isSingle(x, na.ok, is.numeric) && (infinite.ok || is.finite(x))
 }
 
-#' @describeIn Assertions
+#' @describeIn Assertions Is the input a character vector?
 #'
 #' @export
 isCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
@@ -90,7 +97,7 @@ isCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
     is.character(x) && (na.ok || all(!is.na(x))) && (zchar || all(nzchar(x)))
 }
 
-#' @describeIn Assertions
+#' @describeIn Assertions Is the input a character vector of zero or one length?
 #'
 #' @export
 is01character <- function(x, na.ok = FALSE, zchar = FALSE)

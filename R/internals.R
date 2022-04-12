@@ -1,9 +1,9 @@
-#' Convenience function to replace slots
+#' Convenience function to set slot values
 #'
-#' @aliases setSlots
+#' @aliases replaceSlots
 #'
 #' @description
-#' Given the current object, the function `replaceSlots` will take name-value
+#' Given the current object, the function `setSlots` will take name-value
 #' pair inputs either as named arguments or a `list` and replace the values of
 #' the specified slots. This is a convenient function for updating slots in
 #' an S4 class object.
@@ -28,12 +28,10 @@
 #'
 #' aclass <- new("A", slotA = "A")
 #'
-#' replaceSlots(aclass, slotA = "B")
-#'
 #' setSlots(aclass, slotA = "B")
 #'
 #' @export
-replaceSlots <- function (object, ..., check = TRUE)
+setSlots <- function (object, ..., check = TRUE)
 {
     if (!isTRUEorFALSE(check))
         stop("'check' must be TRUE or FALSE")
@@ -41,14 +39,6 @@ replaceSlots <- function (object, ..., check = TRUE)
     if (check)
         validObject(object)
     object
-}
-
-#' @describeIn replaceSlots A synonym for the familiar `replaceSlots`
-#'
-#' @export
-setSlots <- function(object, ..., check = TRUE)
-{
-    replaceSlots(object = object, ..., check = check)
 }
 
 unsafe_replaceSlots <- function (object, ..., .slotList = list())

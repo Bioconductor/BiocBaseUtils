@@ -42,19 +42,24 @@ These are a group of helper functions that allow the developer
 to easily check for common data types in Bioconductor. These include
 logical, character, and numeric (& integer).
 }
+\details{
+Some functions such as \code{isSingleCharacter} allow exceptions to the type
+checks via the \code{na.ok} and \code{zchar} arguments. Others, for example
+\code{isSingleNumber} can permit \code{Inf} with the \code{infinite.ok} argument.
+}
 \section{Functions}{
 \itemize{
-\item \code{isTRUEorFALSE}: 
+\item \code{isTRUEorFALSE}: Is the input a single logical vector?
 
-\item \code{isSingleCharacter}: 
+\item \code{isSingleCharacter}: Is the input a single character vector?
 
-\item \code{isSingleInteger}: 
+\item \code{isSingleInteger}: Is the input a single integer vector?
 
-\item \code{isSingleNumber}: 
+\item \code{isSingleNumber}: Is the input a single numeric vector?
 
-\item \code{isCharacter}: 
+\item \code{isCharacter}: Is the input a character vector?
 
-\item \code{is01character}: 
+\item \code{is01character}: Is the input a character vector of zero or one length?
 }}
 
 \examples{

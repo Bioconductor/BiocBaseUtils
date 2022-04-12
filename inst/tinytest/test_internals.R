@@ -1,6 +1,6 @@
 setClass("A", representation = representation(slotA = "character"))
 aclass <- new("A", slotA = "A")
-aclass <- replaceSlots(aclass, slotA = "B")
+aclass <- setSlots(aclass, slotA = "B")
 expect_identical(aclass@slotA, "B")
 
 invObj <- BiocDevelUtils:::unsafe_replaceSlots(aclass, slotA = 42)
@@ -8,5 +8,5 @@ expect_error(
     methods::validObject(invObj)
 )
 expect_error(
-    replaceSlots(aclass, slotA = 42)
+    setSlots(aclass, slotA = 42)
 )

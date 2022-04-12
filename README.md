@@ -75,7 +75,7 @@ isSingleNumber(1:2)
 
 This function is often used in packages that establish formal S4
 classes. When updating the value of a slot, one often uses the
-`replaceSlots` function.
+`setSlots` function.
 
 ``` r
 setClass("A", representation = representation(slot1 = "numeric"))
@@ -86,16 +86,19 @@ aclass
 #>  [1]  1  2  3  4  5  6  7  8  9 10
 ```
 
-Now we use the `replaceSlots` function to update the values in the
-object.
+Now we use the `setSlots` function to update the values in the object.
 
 ``` r
-aclass <- replaceSlots(aclass, slot1 = 11:20)
+aclass <- setSlots(aclass, slot1 = 11:20)
 aclass
 #> An object of class "A"
 #> Slot "slot1":
 #>  [1] 11 12 13 14 15 16 17 18 19 20
 ```
+
+Note that `setSlots` provides the same functionality as
+`BiocGenerics:::replaceSlots` but is more consistent with Bioconductor
+the setter and getter language.
 
 # Show method
 
@@ -107,7 +110,8 @@ components of the class via an ‘accessor’ function.
 
 ``` r
 setMethod("show", signature = "A", function(object) {
-    cat("A sequence:", selectSome(object@slot1))
+    s1info <- getElement(object, "slot1")
+    cat("A sequence:", selectSome(s1info))
 })
 aclass
 #> A sequence: 11 12 ... 19 20
@@ -144,7 +148,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] BiocDevelUtils_0.99.4
+#> [1] BiocDevelUtils_0.99.5
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] codetools_0.2-18 digest_0.6.29    magrittr_2.0.3   evaluate_0.15   
