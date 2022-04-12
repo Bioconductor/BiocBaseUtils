@@ -109,7 +109,8 @@ via an 'accessor' function.
 
 ```{r}
 setMethod("show", signature = "A", function(object) {
-    cat("A sequence:", selectSome(object@slot1))
+    s1info <- getElement(object, "slot1")
+    cat("A sequence:", selectSome(s1info))
 })
 aclass
 ```
