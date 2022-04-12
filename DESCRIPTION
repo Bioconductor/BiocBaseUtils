@@ -1,6 +1,6 @@
 Package: BiocDevelUtils
 Title: General utility functions for developing Bioconductor packages
-Version: 0.99.4
+Version: 0.99.5
 Authors@R: c(
   person("Marcel", "Ramos", , "marcel.ramos@roswellpark.org",
     c("aut", "cre"), c(ORCID = "0000-0002-3242-0582")
