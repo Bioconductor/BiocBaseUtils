@@ -2,9 +2,12 @@
 % Please edit documentation in R/internals.R
 \name{replaceSlots}
 \alias{replaceSlots}
+\alias{setSlots}
 \title{Convenience function to replace slots}
 \usage{
 replaceSlots(object, ..., check = TRUE)
+
+setSlots(object, ..., check = TRUE)
 }
 \arguments{
 \item{object}{An S4 object with slots to replace}
@@ -24,6 +27,11 @@ pair inputs either as named arguments or a \code{list} and replace the values of
 the specified slots. This is a convenient function for updating slots in
 an S4 class object.
 }
+\section{Functions}{
+\itemize{
+\item \code{setSlots}: A synonym for the familiar \code{replaceSlots}
+}}
+
 \examples{
 
 setClass("A", representation = representation(slotA = "character"))
@@ -31,6 +39,8 @@ setClass("A", representation = representation(slotA = "character"))
 aclass <- new("A", slotA = "A")
 
 replaceSlots(aclass, slotA = "B")
+
+setSlots(aclass, slotA = "B")
 
 }
 \author{

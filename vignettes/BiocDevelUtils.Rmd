@@ -96,6 +96,9 @@ aclass <- replaceSlots(aclass, slot1 = 11:20)
 aclass
 ```
 
+Note that `setSlots` provides the same functionality as `replaceSlots` but
+is more consistent with Bioconductor the setter and getter language.
+
 # Show method
 
 The `selectSome` function allows the developer to display a limited amount of
