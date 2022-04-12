@@ -1,2 +1,2 @@
 if (requireNamespace("tinytest", quietly = TRUE))
-    tinytest::test_package("BiocUtils")
+    tinytest::test_package("BiocDevelUtils")

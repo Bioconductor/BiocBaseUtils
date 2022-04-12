@@ -17,7 +17,7 @@
 #'     inputs (default: `FALSE`).
 #'
 #' @param zchar logical(1L) Whether is is acceptable to consider 'zero'
-#'     characters, i.e., `""` (default: `FALSE`).
+#'     characters as defined by `nchar`, e.g., `nchar("")` (default: `FALSE`).
 #'
 #' @param infinite.ok logical(1L) Whether it is acceptable to consider infinite
 #'     values as identified by `is.finite` (default: `FALSE`).

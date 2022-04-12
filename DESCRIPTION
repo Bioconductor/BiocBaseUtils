@@ -1,5 +1,5 @@
-Package: BiocUtils
-Title: General utility functions for Bioconductor packages
+Package: BiocDevelUtils
+Title: General utility functions for developing Bioconductor packages
 Version: 0.99.4
 Authors@R: c(
   person("Marcel", "Ramos", , "marcel.ramos@roswellpark.org",
@@ -22,7 +22,7 @@ Suggests:
 License: Artistic-2.0
 Encoding: UTF-8
 biocViews: Software, Infrastructure
-BugReports: https://www.github.com/Bioconductor/BiocUtils/issues
+BugReports: https://www.github.com/Bioconductor/BiocDevelUtils/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr

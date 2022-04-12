@@ -29,7 +29,7 @@ is01character(x, na.ok = FALSE, zchar = FALSE)
 inputs (default: \code{FALSE}).}
 
 \item{zchar}{logical(1L) Whether is is acceptable to consider 'zero'
-characters, i.e., \code{""} (default: \code{FALSE}).}
+characters as defined by \code{nchar}, e.g., \code{nchar("")} (default: \code{FALSE}).}
 
 \item{infinite.ok}{logical(1L) Whether it is acceptable to consider infinite
 values as identified by \code{is.finite} (default: \code{FALSE}).}
