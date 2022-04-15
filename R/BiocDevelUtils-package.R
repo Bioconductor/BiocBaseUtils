@@ -1,9 +1,10 @@
-#' BiocDevelUtils: Utility functions for developing Bioconductor packages
+#' BiocDeveloper: Utility and Internal functions for Bioconductor packages
 #'
-#' BiocDevelUtils attempts to formalize often written developer functions that
-#' are scattered throughout the Bioconductor ecosystem. Some of these functions
-#' include the ability to replace slots in an object. Other functions work
-#' to create a nice show method output by selecting some observations.
+#' BiocDeveloper is a package aimed at helping the typical Bioconductor developer
+#' formalize often written functions that can be seen scattered throughout the
+#' Bioconductor ecosystem. Some of these functions include the ability to
+#' replace slots in an object. Other functions work to create a nice show method
+#' output by selecting some observations.
 #'
 #' @aliases NULL
 "_PACKAGE"

@@ -1,3 +1,3 @@
-# BiocDevelUtils 1.0.0
+# BiocDeveloper 1.0.0
 
 * Added a `NEWS.md` file to track changes to the package.

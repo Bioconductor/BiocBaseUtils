@@ -1,9 +1,9 @@
 
-# BiocDevelUtils
+# BiocDeveloper
 
-The `BiocDevelUtils` package provides a suite of helper functions
+The `BiocDeveloper` package provides a suite of helper functions
 designed to help developers. Currently, it covers three topics often
-encountered during the develoment process.
+encountered during the development process.
 
 1.  Assertions - Type checks for logical, character, and numeric inputs
 2.  Slot replacement - Replacing the value of class slots
@@ -14,13 +14,13 @@ encountered during the develoment process.
 ``` r
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install("Bioconductor/BiocDevelUtils")
+BiocManager::install("Bioconductor/BiocDeveloper")
 ```
 
 # Load Package
 
 ``` r
-library(BiocDevelUtils)
+library(BiocDeveloper)
 ```
 
 # Assertions
@@ -119,7 +119,7 @@ aclass
 
 # Contributing
 
-`BiocDevelUtils` is a work in progress and we welcome contributions.
+`BiocDeveloper` is a work in progress and we welcome contributions.
 There are quite a few often-used utility functions that are yet to be
 included in the package. We would like to keep the dependencies in this
 package minimal; therefore, contributions should mostly use base R.
@@ -148,7 +148,7 @@ sessionInfo()
 #> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] BiocDevelUtils_0.99.5
+#> [1] BiocDeveloper_0.99.6
 #> 
 #> loaded via a namespace (and not attached):
 #>  [1] codetools_0.2-18 digest_0.6.29    magrittr_2.0.3   evaluate_0.15   
@@ -159,4 +159,4 @@ sessionInfo()
 ```
 
 Please report minimally reproducible bugs at our [github issue
-page](https://github.com/Bioconductor/BiocDevelUtils/issues).
+page](https://github.com/Bioconductor/BiocDeveloper/issues).

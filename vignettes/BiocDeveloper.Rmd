@@ -1,5 +1,5 @@
 ---
-title: "BiocDevelUtils Quick Start"
+title: "BiocDeveloper Quick Start"
 author: "Bioconductor Core Team"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
@@ -7,7 +7,7 @@ output:
     number_sections: yes
     toc: true
 vignette: >
-  %\VignetteIndexEntry{BiocDevelUtils Quick Start}
+  %\VignetteIndexEntry{BiocDeveloper Quick Start}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -19,11 +19,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-# BiocDevelUtils
+# BiocDeveloper
 
-The `BiocDevelUtils` package provides a suite of helper functions designed to
+The `BiocDeveloper` package provides a suite of helper functions designed to
 help developers. Currently, it covers three topics often encountered during
-the develoment process.
+the development process.
 
 1. Assertions - Type checks for logical, character, and numeric inputs
 2. Slot replacement - Replacing the value of class slots
@@ -34,13 +34,13 @@ the develoment process.
 ```{r,eval=FALSE}
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install("Bioconductor/BiocDevelUtils")
+BiocManager::install("Bioconductor/BiocDeveloper")
 ```
 
 # Load Package
 
 ```{r,include=TRUE,results="hide",message=FALSE,warning=FALSE}
-library(BiocDevelUtils)
+library(BiocDeveloper)
 ```
 
 # Assertions
@@ -118,7 +118,7 @@ aclass
 
 # Contributing
 
-`BiocDevelUtils` is a work in progress and we welcome contributions. There
+`BiocDeveloper` is a work in progress and we welcome contributions. There
 are quite a few often-used utility functions that are yet to be included in the
 package. We would like to keep the dependencies in this package minimal;
 therefore, contributions should mostly use base R.
@@ -132,5 +132,5 @@ sessionInfo()
 
 Please report minimally reproducible bugs at our [github issue page][].
 
-[github issue page]: https://github.com/Bioconductor/BiocDevelUtils/issues
+[github issue page]: https://github.com/Bioconductor/BiocDeveloper/issues
 
