@@ -3,24 +3,24 @@
 \name{Assertions}
 \alias{Assertions}
 \alias{isTRUEorFALSE}
-\alias{isSingleCharacter}
-\alias{isSingleInteger}
-\alias{isSingleNumber}
+\alias{isScalarCharacter}
+\alias{isScalarInteger}
+\alias{isScalarNumber}
 \alias{isCharacter}
-\alias{is01character}
+\alias{isZeroOneCharacter}
 \title{Suite of helper functions to test for types}
 \usage{
 isTRUEorFALSE(x, na.ok = FALSE)
 
-isSingleCharacter(x, na.ok = FALSE, zchar = FALSE)
+isScalarCharacter(x, na.ok = FALSE, zchar = FALSE)
 
-isSingleInteger(x, na.ok = FALSE)
+isScalarInteger(x, na.ok = FALSE)
 
-isSingleNumber(x, na.ok = FALSE, infinite.ok = FALSE)
+isScalarNumber(x, na.ok = FALSE, infinite.ok = FALSE)
 
 isCharacter(x, na.ok = FALSE, zchar = FALSE)
 
-is01character(x, na.ok = FALSE, zchar = FALSE)
+isZeroOneCharacter(x, na.ok = FALSE, zchar = FALSE)
 }
 \arguments{
 \item{x}{The input vector whose type is to be checked}
@@ -43,23 +43,23 @@ to easily check for common data types in Bioconductor. These include
 logical, character, and numeric (& integer).
 }
 \details{
-Some functions such as \code{isSingleCharacter} allow exceptions to the type
+Some functions such as \code{isScalarCharacter} allow exceptions to the type
 checks via the \code{na.ok} and \code{zchar} arguments. Others, for example
-\code{isSingleNumber} can permit \code{Inf} with the \code{infinite.ok} argument.
+\code{isScalarNumber} can permit \code{Inf} with the \code{infinite.ok} argument.
 }
 \section{Functions}{
 \itemize{
 \item \code{isTRUEorFALSE}: Is the input a single logical vector?
 
-\item \code{isSingleCharacter}: Is the input a single character vector?
+\item \code{isScalarCharacter}: Is the input a single character vector?
 
-\item \code{isSingleInteger}: Is the input a single integer vector?
+\item \code{isScalarInteger}: Is the input a single integer vector?
 
-\item \code{isSingleNumber}: Is the input a single numeric vector?
+\item \code{isScalarNumber}: Is the input a single numeric vector?
 
 \item \code{isCharacter}: Is the input a character vector?
 
-\item \code{is01character}: Is the input a character vector of zero or one length?
+\item \code{isZeroOneCharacter}: Is the input a character vector of zero or one length?
 }}
 
 \examples{
@@ -68,18 +68,18 @@ isTRUEorFALSE(TRUE)
 isTRUEorFALSE(FALSE)
 isTRUEorFALSE(NA, na.ok = TRUE)
 
-isSingleCharacter(LETTERS)
-isSingleCharacter("L")
+isScalarCharacter(LETTERS)
+isScalarCharacter("L")
 isCharacter(LETTERS)
 isCharacter(NA_character_, na.ok = TRUE)
-is01character("")
-is01character("", zchar = TRUE)
+isZeroOneCharacter("")
+isZeroOneCharacter("", zchar = TRUE)
 
-isSingleInteger(1L)
-isSingleInteger(1)
+isScalarInteger(1L)
+isScalarInteger(1)
 
-isSingleNumber(1)
-isSingleNumber(1:2)
+isScalarNumber(1)
+isScalarNumber(1:2)
 
 }
 \author{

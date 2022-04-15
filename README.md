@@ -43,31 +43,31 @@ isTRUEorFALSE(NA, na.ok = TRUE)
 ## Character
 
 ``` r
-isSingleCharacter(LETTERS)
+isScalarCharacter(LETTERS)
 #> [1] FALSE
-isSingleCharacter("L")
+isScalarCharacter("L")
 #> [1] TRUE
 isCharacter(LETTERS)
 #> [1] TRUE
 isCharacter(NA_character_, na.ok = TRUE)
 #> [1] TRUE
-is01character("")
+isZeroOneCharacter("")
 #> [1] FALSE
-is01character("", zchar = TRUE)
+isZeroOneCharacter("", zchar = TRUE)
 #> [1] TRUE
 ```
 
 ## Numeric
 
 ``` r
-isSingleInteger(1L)
+isScalarInteger(1L)
 #> [1] TRUE
-isSingleInteger(1)
+isScalarInteger(1)
 #> [1] FALSE
 
-isSingleNumber(1)
+isScalarNumber(1)
 #> [1] TRUE
-isSingleNumber(1:2)
+isScalarNumber(1:2)
 #> [1] FALSE
 ```
 

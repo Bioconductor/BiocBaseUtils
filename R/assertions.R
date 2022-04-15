@@ -14,9 +14,9 @@
 #' logical, character, and numeric (& integer).
 #'
 #' @details
-#' Some functions such as `isSingleCharacter` allow exceptions to the type
+#' Some functions such as `isScalarCharacter` allow exceptions to the type
 #' checks via the `na.ok` and `zchar` arguments. Others, for example
-#' `isSingleNumber` can permit `Inf` with the `infinite.ok` argument.
+#' `isScalarNumber` can permit `Inf` with the `infinite.ok` argument.
 #'
 #' @param x The input vector whose type is to be checked
 #'
@@ -41,18 +41,18 @@
 #' isTRUEorFALSE(FALSE)
 #' isTRUEorFALSE(NA, na.ok = TRUE)
 #'
-#' isSingleCharacter(LETTERS)
-#' isSingleCharacter("L")
+#' isScalarCharacter(LETTERS)
+#' isScalarCharacter("L")
 #' isCharacter(LETTERS)
 #' isCharacter(NA_character_, na.ok = TRUE)
-#' is01character("")
-#' is01character("", zchar = TRUE)
+#' isZeroOneCharacter("")
+#' isZeroOneCharacter("", zchar = TRUE)
 #'
-#' isSingleInteger(1L)
-#' isSingleInteger(1)
+#' isScalarInteger(1L)
+#' isScalarInteger(1)
 #'
-#' isSingleNumber(1)
-#' isSingleNumber(1:2)
+#' isScalarNumber(1)
+#' isScalarNumber(1:2)
 #'
 NULL
 
@@ -68,7 +68,7 @@ isTRUEorFALSE <- function(x, na.ok = FALSE)
 #' @describeIn Assertions Is the input a single character vector?
 #'
 #' @export
-isSingleCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
+isScalarCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
 {
     identical(length(x), 1L) && isCharacter(x, na.ok, zchar)
 }
@@ -76,7 +76,7 @@ isSingleCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
 #' @describeIn Assertions Is the input a single integer vector?
 #'
 #' @export
-isSingleInteger <- function(x, na.ok = FALSE)
+isScalarInteger <- function(x, na.ok = FALSE)
 {
     .isSingle(x, na.ok, is.integer)
 }
@@ -84,7 +84,7 @@ isSingleInteger <- function(x, na.ok = FALSE)
 #' @describeIn Assertions Is the input a single numeric vector?
 #'
 #' @export
-isSingleNumber <- function(x, na.ok = FALSE, infinite.ok = FALSE)
+isScalarNumber <- function(x, na.ok = FALSE, infinite.ok = FALSE)
 {
     .isSingle(x, na.ok, is.numeric) && (infinite.ok || is.finite(x))
 }
@@ -100,7 +100,7 @@ isCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
 #' @describeIn Assertions Is the input a character vector of zero or one length?
 #'
 #' @export
-is01character <- function(x, na.ok = FALSE, zchar = FALSE)
+isZeroOneCharacter <- function(x, na.ok = FALSE, zchar = FALSE)
 {
     (length(x) == 0L || length(x) == 1L) &&
         isCharacter(x, na.ok, zchar)

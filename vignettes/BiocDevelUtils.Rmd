@@ -60,22 +60,22 @@ isTRUEorFALSE(NA, na.ok = TRUE)
 ## Character
 
 ```{r}
-isSingleCharacter(LETTERS)
-isSingleCharacter("L")
+isScalarCharacter(LETTERS)
+isScalarCharacter("L")
 isCharacter(LETTERS)
 isCharacter(NA_character_, na.ok = TRUE)
-is01character("")
-is01character("", zchar = TRUE)
+isZeroOneCharacter("")
+isZeroOneCharacter("", zchar = TRUE)
 ```
 
 ## Numeric
 
 ```{r}
-isSingleInteger(1L)
-isSingleInteger(1)
+isScalarInteger(1L)
+isScalarInteger(1)
 
-isSingleNumber(1)
-isSingleNumber(1:2)
+isScalarNumber(1)
+isScalarNumber(1:2)
 ```
 
 # Slot replacement
