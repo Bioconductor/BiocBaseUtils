@@ -1,5 +1,5 @@
 ---
-title: "BiocDeveloper Quick Start"
+title: "BiocBaseUtils Quick Start"
 author: "Bioconductor Core Team"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
@@ -7,7 +7,7 @@ output:
     number_sections: yes
     toc: true
 vignette: >
-  %\VignetteIndexEntry{BiocDeveloper Quick Start}
+  %\VignetteIndexEntry{BiocBaseUtils Quick Start}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -19,9 +19,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# BiocDeveloper
+# BiocBaseUtils
 
-The `BiocDeveloper` package provides a suite of helper functions designed to
+The `BiocBaseUtils` package provides a suite of helper functions designed to
 help developers. Currently, it covers three topics often encountered during
 the development process.
 
@@ -34,13 +34,13 @@ the development process.
 ```{r,eval=FALSE}
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install("Bioconductor/BiocDeveloper")
+BiocManager::install("Bioconductor/BiocBaseUtils")
 ```
 
 # Load Package
 
 ```{r,include=TRUE,results="hide",message=FALSE,warning=FALSE}
-library(BiocDeveloper)
+library(BiocBaseUtils)
 ```
 
 # Assertions
@@ -118,7 +118,7 @@ aclass
 
 # Contributing
 
-`BiocDeveloper` is a work in progress and we welcome contributions. There
+`BiocBaseUtils` is a work in progress and we welcome contributions. There
 are quite a few often-used utility functions that are yet to be included in the
 package. We would like to keep the dependencies in this package minimal;
 therefore, contributions should mostly use base R.
@@ -132,5 +132,5 @@ sessionInfo()
 
 Please report minimally reproducible bugs at our [github issue page][].
 
-[github issue page]: https://github.com/Bioconductor/BiocDeveloper/issues
+[github issue page]: https://github.com/Bioconductor/BiocBaseUtils/issues
 

@@ -1,4 +1,4 @@
-Package: BiocDeveloper
+Package: BiocBaseUtils
 Title: General utility functions for developing Bioconductor packages
 Version: 0.99.9
 Authors@R: c(
@@ -22,7 +22,7 @@ Suggests:
 License: Artistic-2.0
 Encoding: UTF-8
 biocViews: Software, Infrastructure
-BugReports: https://www.github.com/Bioconductor/BiocDeveloper/issues
+BugReports: https://www.github.com/Bioconductor/BiocBaseUtils/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr
