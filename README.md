@@ -6,15 +6,18 @@ designed to help developers. Currently, it covers three topics often
 encountered during the development process.
 
 1.  Assertions - Type checks for logical, character, and numeric inputs
-2.  Slot replacement - Replacing the value of class slots
-3.  Show method - Limiting the output of internal components of a class
+2.  Slot replacement - Replacing the value of object slots
+3.  `show` method - Limiting the output of internal components of a
+    class
 
 # Installation
+
+Install the package directly from Bioconductor:
 
 ``` r
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install("Bioconductor/BiocBaseUtils")
+BiocManager::install("BiocBaseUtils")
 ```
 
 # Load Package
@@ -27,7 +30,8 @@ library(BiocBaseUtils)
 
 We provide a number of functions that helps the developer establish the
 type of class of a particular object. These include `integer`,
-`numeric`, `character`, and `logical`; types often used in Bioconductor.
+`numeric`, `character`, and `logical`; types often used in R /
+Bioconductor.
 
 ## Logical
 
@@ -100,7 +104,7 @@ Note that `setSlots` provides the same functionality as
 `BiocGenerics:::replaceSlots` but is more consistent with Bioconductor
 the setter and getter language.
 
-# Show method
+# `show` method
 
 The `selectSome` function allows the developer to display a limited
 amount of information from a developed class. Note that the use of the
@@ -128,7 +132,7 @@ package minimal; therefore, contributions should mostly use base R.
 
 ``` r
 sessionInfo()
-#> R Under development (unstable) (2022-03-17 r81925)
+#> R version 4.2.1 (2022-06-23)
 #> Platform: x86_64-pc-linux-gnu (64-bit)
 #> Running under: Ubuntu 20.04.4 LTS
 #> 
@@ -137,25 +141,22 @@ sessionInfo()
 #> LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
 #> 
 #> locale:
-#>  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-#>  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-#>  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-#>  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-#>  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-#> [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+#>  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+#>  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+#>  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+#> [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
 #> 
 #> attached base packages:
-#> [1] stats     graphics  grDevices utils     datasets  methods   base     
+#> [1] stats     graphics  grDevices datasets  utils     methods   base     
 #> 
 #> other attached packages:
-#> [1] BiocBaseUtils_0.99.6
+#> [1] BiocBaseUtils_0.99.10
 #> 
 #> loaded via a namespace (and not attached):
-#>  [1] codetools_0.2-18 digest_0.6.29    magrittr_2.0.3   evaluate_0.15   
-#>  [5] rlang_1.0.2      stringi_1.7.6    cli_3.2.0        rstudioapi_0.13 
-#>  [9] rmarkdown_2.13   tools_4.2.0      stringr_1.4.0    xfun_0.30       
-#> [13] yaml_2.3.5       fastmap_1.1.0    compiler_4.2.0   htmltools_0.5.2 
-#> [17] knitr_1.38
+#>  [1] compiler_4.2.1   magrittr_2.0.3   fastmap_1.1.0    htmltools_0.5.3 
+#>  [5] tools_4.2.1      yaml_2.3.5       codetools_0.2-18 stringi_1.7.8   
+#>  [9] rmarkdown_2.15   knitr_1.39       stringr_1.4.0    xfun_0.32       
+#> [13] digest_0.6.29    rlang_1.0.4      renv_0.15.5      evaluate_0.16
 ```
 
 Please report minimally reproducible bugs at our [github issue
