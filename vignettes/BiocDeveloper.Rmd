@@ -34,7 +34,7 @@ the development process.
 ```{r,eval=FALSE}
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install("Bioconductor/BiocBaseUtils")
+BiocManager::install("BiocBaseUtils")
 ```
 
 # Load Package
