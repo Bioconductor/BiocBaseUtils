@@ -26,10 +26,12 @@ help developers. Currently, it covers three topics often encountered during
 the development process.
 
 1. Assertions - Type checks for logical, character, and numeric inputs
-2. Slot replacement - Replacing the value of class slots
-3. Show method - Limiting the output of internal components of a class
+2. Slot replacement - Replacing the value of object slots
+3. `show` method - Limiting the output of internal components of a class
 
 # Installation
+
+Install the package directly from Bioconductor:
 
 ```{r,eval=FALSE}
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -47,7 +49,7 @@ library(BiocBaseUtils)
 
 We provide a number of functions that helps the developer establish the
 type of class of a particular object. These include `integer`, `numeric`,
-`character`, and `logical`; types often used in Bioconductor.
+`character`, and `logical`; types often used in R / Bioconductor.
 
 ## Logical
 
@@ -100,7 +102,7 @@ Note that `setSlots` provides the same functionality as
 `BiocGenerics:::replaceSlots` but is more consistent with Bioconductor the
 setter and getter language.
 
-# Show method
+# `show` method
 
 The `selectSome` function allows the developer to display a limited amount of
 information from a developed class. Note that the use of the `@` here is due
@@ -123,7 +125,6 @@ are quite a few often-used utility functions that are yet to be included in the
 package. We would like to keep the dependencies in this package minimal;
 therefore, contributions should mostly use base R.
 
-
 # Session Info
 
 ```{r}
@@ -133,4 +134,3 @@ sessionInfo()
 Please report minimally reproducible bugs at our [github issue page][].
 
 [github issue page]: https://github.com/Bioconductor/BiocBaseUtils/issues
-

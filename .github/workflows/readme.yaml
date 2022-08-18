@@ -7,11 +7,13 @@ name: render-rmarkdown
 jobs:
   render-rmarkdown:
     runs-on: ubuntu-latest
+
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -21,20 +23,27 @@ jobs:
 
       - uses: r-lib/actions/setup-renv@v1
 
+      - name: Query dependencies
+        run: |
+          install.packages(c("remotes", "rmarkdown", "BiocManager"))
+        shell: Rscript {0}
+
       - name: Install Dependencies
         run: |
           options(repos = c(CRAN = "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"))
-          install.packages("rmarkdown")
+          BiocManager::install(version = "devel", ask = FALSE)
+          remotes::install_deps(dependencies = TRUE, repos = BiocManager::repositories())
+          remotes::install_local(repos = BiocManager::repositories())
         shell: Rscript {0}
 
-      - name: Render Rmarkdown files
+      - name: Render README
         run: |
-          RMD_PATH=($(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '[.]Rmd$'))
-          Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) rmarkdown::render(f)' ${RMD_PATH[*]}
+          Rscript -e 'rmarkdown::render(input = "inst/scripts/README.Rmd", output_dir = ".")'
 
       - name: Commit results
         run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git commit ${RMD_PATH[*]/.Rmd/.md} -m 'Re-build Rmarkdown files' || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+          git add README.md
+          git commit -m 'Re-build README.md file'
+          git push origin
