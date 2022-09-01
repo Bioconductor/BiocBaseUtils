@@ -49,19 +49,19 @@ checks via the \code{na.ok} and \code{zchar} arguments. Others, for example
 }
 \section{Functions}{
 \itemize{
-\item \code{isTRUEorFALSE}: Is the input a single logical vector?
+\item \code{isTRUEorFALSE()}: Is the input a single logical vector?
 
-\item \code{isScalarCharacter}: Is the input a single character vector?
+\item \code{isScalarCharacter()}: Is the input a single character vector?
 
-\item \code{isScalarInteger}: Is the input a single integer vector?
+\item \code{isScalarInteger()}: Is the input a single integer vector?
 
-\item \code{isScalarNumber}: Is the input a single numeric vector?
+\item \code{isScalarNumber()}: Is the input a single numeric vector?
 
-\item \code{isCharacter}: Is the input a character vector?
+\item \code{isCharacter()}: Is the input a character vector?
 
-\item \code{isZeroOneCharacter}: Is the input a character vector of zero or one length?
+\item \code{isZeroOneCharacter()}: Is the input a character vector of zero or one length?
+
 }}
-
 \examples{
 
 isTRUEorFALSE(TRUE)
