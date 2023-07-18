@@ -6,6 +6,7 @@
 \alias{isScalarCharacter}
 \alias{isScalarInteger}
 \alias{isScalarNumber}
+\alias{isScalarLogical}
 \alias{isCharacter}
 \alias{isZeroOneCharacter}
 \title{Suite of helper functions to test for types}
@@ -17,6 +18,8 @@ isScalarCharacter(x, na.ok = FALSE, zchar = FALSE)
 isScalarInteger(x, na.ok = FALSE)
 
 isScalarNumber(x, na.ok = FALSE, infinite.ok = FALSE)
+
+isScalarLogical(x, na.ok = FALSE)
 
 isCharacter(x, na.ok = FALSE, zchar = FALSE)
 
@@ -56,6 +59,8 @@ checks via the \code{na.ok} and \code{zchar} arguments. Others, for example
 \item \code{isScalarInteger()}: Is the input a single integer vector?
 
 \item \code{isScalarNumber()}: Is the input a single numeric vector?
+
+\item \code{isScalarLogical()}: Is the input a single logical vector?
 
 \item \code{isCharacter()}: Is the input a character vector?
 

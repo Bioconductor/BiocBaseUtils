@@ -3,6 +3,7 @@
 export(isCharacter)
 export(isScalarCharacter)
 export(isScalarInteger)
+export(isScalarLogical)
 export(isScalarNumber)
 export(isTRUEorFALSE)
 export(isZeroOneCharacter)

@@ -89,6 +89,14 @@ isScalarNumber <- function(x, na.ok = FALSE, infinite.ok = FALSE)
     .isSingle(x, na.ok, is.numeric) && (infinite.ok || is.finite(x))
 }
 
+#' @describeIn Assertions Is the input a single logical vector?
+#'
+#' @export
+isScalarLogical <- function(x, na.ok = FALSE)
+{
+    .isSingle(x, na.ok, is.logical)
+}
+
 #' @describeIn Assertions Is the input a character vector?
 #'
 #' @export
