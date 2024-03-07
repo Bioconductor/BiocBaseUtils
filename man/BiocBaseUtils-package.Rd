@@ -2,6 +2,8 @@
 % Please edit documentation in R/BiocDeveloper-package.R
 \docType{package}
 \name{BiocBaseUtils-package}
+\alias{BiocBaseUtils}
+\alias{BiocBaseUtils-package}
 \title{BiocBaseUtils: Utility and Internal functions for Bioconductor packages}
 \description{
 BiocBaseUtils is a package aimed at helping the typical Bioconductor developer
