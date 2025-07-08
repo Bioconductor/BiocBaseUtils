@@ -30,7 +30,7 @@
 #'     lifeCycle(newfun = "new_test", package = "BiocBaseUtils")
 #' }
 #' ## catch warning and convert to message
-#' tryCatch(test_fun(), warning = function(w) message(w) )
+#' tryCatch(test_fun(), warning = function(w) message(w))
 #'
 #' test_fun <- function() {
 #'     lifeCycle(

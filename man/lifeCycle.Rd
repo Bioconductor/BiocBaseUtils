@@ -43,17 +43,14 @@ deprecated or defunct. It is a wrapper around both \code{.Deprecated} and
 test_fun <- function() {
     lifeCycle(newfun = "new_test", package = "BiocBaseUtils")
 }
-tryCatch(
-   test_fun(),
-   warning = function(w) message(w)
-)
+## catch warning and convert to message
+tryCatch(test_fun(), warning = function(w) message(w))
+
 test_fun <- function() {
     lifeCycle(
         newfun = "new_test", package = "BiocBaseUtils", cycle = "defunct"
     )
 }
-tryCatch(
-   test_fun(),
-   error = function(e) message(e)
-)
+## catch error and convert to message
+tryCatch(test_fun(), error = function(e) message(e))
 }
