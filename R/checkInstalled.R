@@ -40,11 +40,12 @@ checkInstalled <- function(pkgs) {
         width = getOption("width") - 4L
     ), collapse="\n    ")
     cat(
-        "The following package(s) are required for this function:",
+        "Install the required package(s) with:",
         "\n\n", sprintf(fmt, pkgs), "\n\n", sep = ""
     )
     stop(
-        "To use this function, install missing package dependencies.",
+        "The calling function requires missing package dependencies:\n  ",
+        sprintf("\"%s\"", pkgs),
         call. = FALSE
     )
 }
