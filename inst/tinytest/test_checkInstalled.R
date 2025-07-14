@@ -1,6 +1,9 @@
 expect_error(
     checkInstalled("abc123xyzjfk"),
-    "To use this function, install missing package dependencies."
+    paste0(
+        "The calling function requires missing package dependencies:",
+        "\n  \"abc123xyzjfk\""
+    )
 )
 
 tinytest::expect_match(
