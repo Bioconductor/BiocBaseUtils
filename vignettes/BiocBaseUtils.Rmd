@@ -12,7 +12,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -33,7 +33,7 @@ the development process.
 
 Install the package directly from Bioconductor:
 
-```{r,eval=FALSE}
+```{r install, eval=FALSE}
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("BiocBaseUtils")
@@ -41,7 +41,7 @@ BiocManager::install("BiocBaseUtils")
 
 # Load Package
 
-```{r,include=TRUE,results="hide",message=FALSE,warning=FALSE}
+```{r load-package, include=TRUE, results="hide", message=FALSE, warning=FALSE}
 library(BiocBaseUtils)
 ```
 
@@ -53,7 +53,7 @@ type of class of a particular object. These include `integer`, `numeric`,
 
 ## Logical
 
-```{r}
+```{r assertions-logical}
 isTRUEorFALSE(TRUE)
 isTRUEorFALSE(FALSE)
 isTRUEorFALSE(NA, na.ok = TRUE)
@@ -61,7 +61,7 @@ isTRUEorFALSE(NA, na.ok = TRUE)
 
 ## Character
 
-```{r}
+```{r assertions-character}
 isScalarCharacter(LETTERS)
 isScalarCharacter("L")
 isCharacter(LETTERS)
@@ -72,7 +72,7 @@ isZeroOneCharacter("", zchar = TRUE)
 
 ## Numeric
 
-```{r}
+```{r assertions-numeric}
 isScalarInteger(1L)
 isScalarInteger(1)
 
@@ -85,7 +85,7 @@ isScalarNumber(1:2)
 This function is often used in packages that establish formal S4 classes.
 When updating the value of a slot, one often uses the `setSlots` function.
 
-```{r}
+```{r setslots-class}
 setClass("A", representation = representation(slot1 = "numeric"))
 aclass <- new("A", slot1 = 1:10)
 aclass
@@ -93,7 +93,7 @@ aclass
 
 Now we use the `setSlots` function to update the values in the object.
 
-```{r}
+```{r setslots-update}
 aclass <- setSlots(aclass, slot1 = 11:20)
 aclass
 ```
@@ -110,7 +110,7 @@ to the minimal implementation in the examples provided. The developer should
 always provide an interface to access the internal components of the class
 via an 'accessor' function.
 
-```{r}
+```{r selectsome-show}
 setMethod("show", signature = "A", function(object) {
     s1info <- getElement(object, "slot1")
     cat("A sequence:", selectSome(s1info))
@@ -127,7 +127,7 @@ therefore, contributions should mostly use base R.
 
 # Session Info
 
-```{r}
+```{r session-info}
 sessionInfo()
 ```
 
