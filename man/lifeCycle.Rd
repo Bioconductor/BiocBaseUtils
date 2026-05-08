@@ -33,6 +33,12 @@ either \code{"deprecated"} or \code{"defunct"}.}
 where deprecated or defunct functions are documented (e.g., "summary" for
 "summary-deprecated"). By default, the package name is used.}
 }
+\value{
+Called for the side effect of issuing a warning or error message
+when a function is deprecated or defunct, respectively. The message
+includes the name of the function, the life cycle stage, and a suggestion
+for an alternative function to use.'
+}
 \description{
 The \code{lifeCycle} function is used to set the life cycle stage of
 a function. It is to be used within the body of the function that is being
