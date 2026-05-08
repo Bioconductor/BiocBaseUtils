@@ -1,5 +1,5 @@
 Package: BiocBaseUtils
-Title: General utility functions for developing Bioconductor packages
+Title: Utility and internal functions for Bioconductor packages
 Version: 1.14.0
 Authors@R: c(
   person("Marcel", "Ramos", , "marcel.ramos@sph.cuny.edu",
@@ -9,12 +9,13 @@ Authors@R: c(
   ),
   person("Hervé", "Pagès", , "hpages.on.github@gmail.com", "ctb")
   )
-Description: The package provides utility functions related to package
-  development. These include functions that replace slots, and selectors
-  for show methods. It aims to coalesce the various helper functions
-  often re-used throughout the Bioconductor ecosystem.
+Description: The package coalesces typical helper functions that are scattered
+  throughout the Bioconductor ecosystem. It aims to reduce code redundancy by
+  formalizing functions often used by Bioconductor developers. These functions
+  include operations such as replacing slots in an object, selecting
+  observations for show methods, labeling function life cycles, and more.
 Imports: methods, utils
-Depends: R (>= 4.2.0)
+Depends: R (>= 4.6.0)
 Suggests:
   knitr,
   rmarkdown,
@@ -24,6 +25,7 @@ License: Artistic-2.0
 Encoding: UTF-8
 biocViews: Software, Infrastructure
 BugReports: https://www.github.com/Bioconductor/BiocBaseUtils/issues
+URL: https://www.github.com/Bioconductor/BiocBaseUtils
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
