@@ -1,7 +1,8 @@
 #' Ask user for a yes/no response
 #'
-#' @param prompt `character()` Question form prompt to display to the user
-#'   without a question mark
+#' @param prompt `character()` A close-ended yes or no question to pose
+#'   to the user e.g., `"Do you want to continue?"`. Note that the question
+#'   must include a question mark (`?`).
 #'
 #' @param interactive.only `logical(1)` If `TRUE`, the function will only
 #'  prompt the user when the R session is interactive. If `FALSE`, the
@@ -13,7 +14,7 @@
 #'
 #' @examples
 #'
-#' askUserYesNo("Do you want to continue")
+#' askUserYesNo("Do you want to continue?")
 #'
 #' @export
 askUserYesNo <-
@@ -22,7 +23,7 @@ askUserYesNo <-
     if (interactive.only && !interactive())
         return(FALSE)
     responses <- c("yes", "no")
-    msg1 <- paste0(prompt, " [", paste(responses, collapse = ", "), "]? ")
+    msg1 <- paste0(prompt, " [", paste(responses, collapse = ", "), "]: ")
     msg2 <- paste0("reply with '", paste(responses, collapse = "' or '"), "'")
     repeat {
         userResponse <- trimws(tolower(readline(msg1)))

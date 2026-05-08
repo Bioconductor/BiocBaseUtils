@@ -7,8 +7,9 @@
 askUserYesNo(prompt, interactive.only = TRUE)
 }
 \arguments{
-\item{prompt}{\code{character()} Question form prompt to display to the user
-without a question mark}
+\item{prompt}{\code{character()} A close-ended yes or no question to pose
+to the user e.g., \code{"Do you want to continue?"}. Note that the question
+must include a question mark (\verb{?}).}
 
 \item{interactive.only}{\code{logical(1)} If \code{TRUE}, the function will only
 prompt the user when the R session is interactive. If \code{FALSE}, the
@@ -22,7 +23,7 @@ Ask user for a yes/no response
 }
 \examples{
 
-askUserYesNo("Do you want to continue")
+askUserYesNo("Do you want to continue?")
 
 }
 \author{
