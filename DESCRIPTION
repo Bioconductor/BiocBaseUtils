@@ -27,6 +27,6 @@ biocViews: Software, Infrastructure
 BugReports: https://www.github.com/Bioconductor/BiocBaseUtils/issues
 URL: https://www.github.com/Bioconductor/BiocBaseUtils
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 Date: 2025-07-14
+Config/roxygen2/version: 8.0.0
