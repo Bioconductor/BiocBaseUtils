@@ -13,6 +13,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r,echo=FALSE,eval=FALSE}
+## Generate the ./README.md (relative to base folder)
+rmarkdown::render(input = "inst/scripts/README.Rmd", output_dir = ".")
+```
+
 ```{r, child="../../vignettes/BiocBaseUtils.Rmd"}
 
 ```

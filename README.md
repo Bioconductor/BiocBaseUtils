@@ -132,31 +132,47 @@ package minimal; therefore, contributions should mostly use base R.
 
 ``` r
 sessionInfo()
-#> R version 4.2.1 (2022-06-23)
-#> Platform: x86_64-pc-linux-gnu (64-bit)
-#> Running under: Ubuntu 20.04.4 LTS
+#> R version 4.6.0 Patched (2026-04-24 r89961)
+#> Platform: x86_64-pc-linux-gnu
+#> Running under: Ubuntu 24.04.4 LTS
 #> 
 #> Matrix products: default
-#> BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
-#> LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+#> BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 
+#> LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0
 #> 
 #> locale:
-#>  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
-#>  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
-#>  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-#> [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+#>  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+#>  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+#>  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+#>  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+#>  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+#> [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+#> 
+#> time zone: America/New_York
+#> tzcode source: system (glibc)
 #> 
 #> attached base packages:
-#> [1] stats     graphics  grDevices datasets  utils     methods   base     
+#> [1] stats     graphics  grDevices utils     datasets  methods   base     
 #> 
 #> other attached packages:
-#> [1] BiocBaseUtils_0.99.10
+#> [1] BiocBaseUtils_1.15.0
 #> 
 #> loaded via a namespace (and not attached):
-#>  [1] compiler_4.2.1   magrittr_2.0.3   fastmap_1.1.0    htmltools_0.5.3 
-#>  [5] tools_4.2.1      yaml_2.3.5       codetools_0.2-18 stringi_1.7.8   
-#>  [9] rmarkdown_2.15   knitr_1.39       stringr_1.4.0    xfun_0.32       
-#> [13] digest_0.6.29    rlang_1.0.4      renv_0.15.5      evaluate_0.16
+#>  [1] compiler_4.6.0      BiocManager_1.30.27 credentials_2.0.3  
+#>  [4] yaml_2.3.12         fastmap_1.2.0       R6_2.6.1           
+#>  [7] BiocAddins_0.99.26  knitr_1.51          tibble_3.3.1       
+#> [10] desc_1.4.3          openssl_2.4.0       rprojroot_2.1.1    
+#> [13] pillar_1.11.1       rlang_1.2.0         cachem_1.1.0       
+#> [16] xfun_0.57           sys_3.4.3           fs_2.1.0           
+#> [19] pkgload_1.5.2       otel_0.2.0          memoise_2.0.1      
+#> [22] cli_3.6.6           withr_3.0.2         magrittr_2.0.5     
+#> [25] digest_0.6.39       rstudioapi_0.18.0   devtools_2.5.2     
+#> [28] askpass_1.2.1       gert_2.3.1          lifecycle_1.0.5    
+#> [31] vctrs_0.7.3         evaluate_1.0.5      glue_1.8.1         
+#> [34] whisker_0.4.1       codetools_0.2-20    sessioninfo_1.2.3  
+#> [37] rsconnect_1.8.0     pkgbuild_1.4.8      rmarkdown_2.31     
+#> [40] purrr_1.2.2         tools_4.6.0         usethis_3.2.1      
+#> [43] pkgconfig_2.0.3     ellipsis_0.3.3      htmltools_0.5.9
 ```
 
 Please report minimally reproducible bugs at our [github issue
