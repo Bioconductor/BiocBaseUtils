@@ -1,0 +1,11 @@
+\.httr-oauth$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.httr-oauth$
+vignettes/.*R$
+vignettes/.*html
+vignettes/.*_cache
+^doc$
+^Meta$
+.github
+
