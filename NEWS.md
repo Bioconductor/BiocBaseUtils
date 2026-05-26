@@ -1,3 +1,12 @@
+# Changes in version 1.14.1
+
+## Bug fixes and minor improvements
+
+* Updated `DESCRIPTION` fields for `BiocCheck` compliance.
+* Formatted the vignette to comply with `BiocCheck` (added chunk labels and
+  used 4-space indentation).
+* Added return value documentation to the `lifeCycle` function.
+
 # Changes in version 1.12.0
 
 ## Bug fixes and minor improvements
